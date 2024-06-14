@@ -1,0 +1,1 @@
+#neovim install on my samsung notebook
