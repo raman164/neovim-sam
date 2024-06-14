@@ -1,1 +1,0 @@
-#neovim on samsung notebook
