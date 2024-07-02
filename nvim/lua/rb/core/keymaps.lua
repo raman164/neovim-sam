@@ -10,6 +10,10 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 
+-- Showing line numbers
+keymap.set("n", "<leader>nn", "<cmd>set nu!<CR>", { desc = "Show Line Numbers" })
+keymap.set("n", "<leader>nr", ":set rnu!<CR>", { desc = "Show Relative Numbers" })
+
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
