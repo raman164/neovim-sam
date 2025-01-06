@@ -6,6 +6,18 @@
 --
 -- Filename: ~/github/dotfiles-latest/neovim/nvim-lazyvim/lua/plugins/auto-save.lua
 -- ~/github/dotfiles-latest/neovim/nvim-lazyvim/lua/plugins/auto-save.lua
+local group = vim.api.nvim_create_augroup("autosave", {})
+
+vim.api.nvim_create_autocmd("User", {
+    pattern = "AutoSaveWritePost",
+    group = group,
+    callback = function(opts)
+        if opts.data.saved_buffer ~= nil then
+            local filename = vim.api.nvim_buf_get_name(opts.data.saved_buffer)
+            print("AutoSave: saved " .. filename .. " at " .. vim.fn.strftime("%H:%M:%S"))
+        end
+    end,
+})
 
 return {
     {
